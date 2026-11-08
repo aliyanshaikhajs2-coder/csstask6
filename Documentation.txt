@@ -1,0 +1,90 @@
+CSS TASK 6 — CSS COMBINATORS
+==============================
+
+ASSIGNMENT OBJECTIVE
+Study CSS Combinators, understand how they work, write their explanations in your
+own words, and create a webpage demonstrating the concepts.
+
+WHAT ARE CSS COMBINATORS?
+CSS combinators are selectors that describe the relationship between HTML elements.
+They allow us to select elements according to their relationship with other elements.
+
+THE FOUR MAIN CSS COMBINATORS
+
+1. DESCENDANT COMBINATOR (SPACE)
+Syntax:
+.parent p {
+    color: blue;
+}
+
+Working:
+A space between two selectors selects all matching elements inside the first element.
+The selected element can be a direct child or nested at a deeper level.
+
+In this project:
+.descendant-box p selects both paragraphs inside the descendant demonstration,
+including the paragraph nested inside another div.
+
+2. CHILD COMBINATOR (>)
+Syntax:
+.parent > p {
+    color: green;
+}
+
+Working:
+The greater-than symbol selects only elements that are direct children of the
+specified parent. It does not select matching elements nested inside another element.
+
+In this project:
+.child-box > p selects the direct paragraph but does not select the paragraph
+inside the nested div.
+
+3. ADJACENT SIBLING COMBINATOR (+)
+Syntax:
+h2 + p {
+    color: orange;
+}
+
+Working:
+The plus symbol selects the first matching element immediately after the specified
+element. Both elements must have the same parent.
+
+In this project:
+.adjacent-title + p selects only the first paragraph immediately after the heading.
+The next paragraph is not selected by this selector.
+
+4. GENERAL SIBLING COMBINATOR (~)
+Syntax:
+h2 ~ p {
+    color: purple;
+}
+
+Working:
+The tilde symbol selects all matching sibling elements that come after the specified
+element. They must share the same parent, but other element types may appear between them.
+
+In this project:
+.general-title ~ p selects all paragraphs after the heading, including paragraphs
+that appear after a div element.
+
+DIFFERENCE BETWEEN THE FOUR COMBINATORS
+
+- Descendant (space): selects all matching descendants at any depth.
+- Child (>): selects only direct children.
+- Adjacent sibling (+): selects only the immediately following matching sibling.
+- General sibling (~): selects all following matching siblings.
+
+PROJECT DESCRIPTION
+I created a CSS Combinators Learning Page. It contains four separate demonstrations.
+Each demonstration uses HTML elements and a different CSS combinator. Different
+background colors and borders make the selected elements easy to identify.
+
+FILES INCLUDED
+- index.html: webpage structure and examples.
+- style.css: design, layout, and CSS combinator selectors.
+- Documentation.txt: explanation of all four combinators and their working.
+
+CONCLUSION
+This assignment helped me understand how CSS combinators select elements based on
+their relationships. I practiced descendant, child, adjacent sibling, and general
+sibling selectors by applying them to real HTML examples.

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Task 6 - Combinators</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <p class="eyebrow">CSS LEARNING PROJECT</p>
+        <h1>Understanding CSS Combinators</h1>
+        <p class="hero-text">
+            Learn how CSS selectors target elements through their relationships.
+        </p>
+        <a href="#examples" class="hero-button">Explore Examples</a>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>What are CSS Combinators?</h2>
+            <p>
+                CSS combinators define relationships between selectors. They help us
+                select HTML elements based on their position in relation to other elements.
+            </p>
+        </section>
+
+        <section id="examples" class="lesson">
+            <div class="lesson-heading">
+                <span class="number">01</span>
+                <div>
+                    <h2>Descendant Combinator</h2>
+                    <code>.descendant-box p</code>
+                </div>
+            </div>
+            <p class="explanation">
+                A space selects all matching elements inside another element,
+                even when they are nested at different levels.
+            </p>
+            <div class="demo descendant-box">
+                <p>This paragraph is inside the parent.</p>
+                <div>
+                    <p>This paragraph is nested deeper, but it is also selected.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson">
+            <div class="lesson-heading">
+                <span class="number">02</span>
+                <div>
+                    <h2>Child Combinator</h2>
+                    <code>.child-box &gt; p</code>
+                </div>
+            </div>
+            <p class="explanation">
+                The greater-than symbol selects only direct children of the parent.
+                It does not select paragraphs nested inside another element.
+            </p>
+            <div class="demo child-box">
+                <p>This is a direct child paragraph and is selected.</p>
+                <div>
+                    <p>This paragraph is nested inside a div, so it is not selected.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="lesson">
+            <div class="lesson-heading">
+                <span class="number">03</span>
+                <div>
+                    <h2>Adjacent Sibling Combinator</h2>
+                    <code>.adjacent-title + p</code>
+                </div>
+            </div>
+            <p class="explanation">
+                The plus symbol selects the first matching sibling immediately
+                after the specified element.
+            </p>
+            <div class="demo sibling-box">
+                <h3 class="adjacent-title">About Web Design</h3>
+                <p>This paragraph comes immediately after the heading, so it is selected.</p>
+                <p>This is the second paragraph, so it is not selected by the plus selector.</p>
+            </div>
+        </section>
+
+        <section class="lesson">
+            <div class="lesson-heading">
+                <span class="number">04</span>
+                <div>
+                    <h2>General Sibling Combinator</h2>
+                    <code>.general-title ~ p</code>
+                </div>
+            </div>
+            <p class="explanation">
+                The tilde symbol selects all matching siblings that appear after
+                the specified element and share the same parent.
+            </p>
+            <div class="demo sibling-box">
+                <h3 class="general-title">Why Learn CSS?</h3>
+                <p>This paragraph comes after the heading and is selected.</p>
+                <div>A div element between the paragraphs.</div>
+                <p>This paragraph is also selected.</p>
+                <p>This paragraph is selected too.</p>
+            </div>
+        </section>
+
+        <section class="summary">
+            <h2>Quick Comparison</h2>
+            <div class="comparison">
+                <div><strong>Space ( )</strong><span>All descendants</span></div>
+                <div><strong>Greater than (&gt;)</strong><span>Direct children only</span></div>
+                <div><strong>Plus (+)</strong><span>Immediately next sibling</span></div>
+                <div><strong>Tilde (~)</strong><span>All following siblings</span></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CSS Task 6 — Combinators</p>
+    </footer>
+
+</body>
+</html>
